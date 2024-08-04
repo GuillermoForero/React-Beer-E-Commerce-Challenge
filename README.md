@@ -1,6 +1,3 @@
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 # Beer Challenge 
 
 ## Description
@@ -133,3 +130,5 @@ Production Mode
 To run the application in production mode, use:
 
     npm run start
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
