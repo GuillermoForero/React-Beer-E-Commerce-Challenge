@@ -1,5 +1,3 @@
-import React from "react";
-
 import { useProducts } from "@/context/ProductsContext";
 
 import ProductListCard from "../ProductListCard";

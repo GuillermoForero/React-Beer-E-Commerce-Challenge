@@ -1,5 +1,3 @@
-import React from "react";
-
 const namespace = "button-size";
 
 const ButtonSize = ({ isActive, setActive, sku, name }) => {

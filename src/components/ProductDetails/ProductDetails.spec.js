@@ -1,4 +1,3 @@
-import React from "react";
 import { render, screen, fireEvent, act } from "@testing-library/react";
 import { useProducts } from "@/context/ProductsContext";
 import { fetchStockPrice } from "@/services/productsService";

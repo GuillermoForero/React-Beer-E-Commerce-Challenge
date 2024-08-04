@@ -1,5 +1,3 @@
-import React from "react";
-
 import MenuIcon from "@/icons/menuIcon";
 import { fetchProducts } from "@/services/productsService";
 

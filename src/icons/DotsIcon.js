@@ -1,5 +1,3 @@
-import React from "react";
-
 const DotsIcon = () => (
   <svg
     width="24"
