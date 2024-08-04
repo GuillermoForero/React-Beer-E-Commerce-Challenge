@@ -1,0 +1,17 @@
+@import "./normalize.scss";
+@import "./variables.scss";
+@import "../../components/ProductListCard/index.scss";
+@import "../../components/ProductList/index.scss";
+@import "../../components/ProductDetails/index.scss";
+@import "../../components/ButtonSize/index.scss";
+@import "./products.scss";
+
+body {
+  background-color: $app-background-color;
+  height: 100vh;
+}
+
+* {
+  font-size: 100%;
+  font-family: "DM Sans";
+}
