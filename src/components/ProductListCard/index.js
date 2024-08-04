@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 
 const namespace = "product-list-card";
-const ProductListCard = ({ image, name, rating, price, id, brand }) => {
+const ProductListCard = ({ image, rating, price, id, brand }) => {
   const router = useRouter();
   return (
     <div
@@ -9,10 +9,9 @@ const ProductListCard = ({ image, name, rating, price, id, brand }) => {
       onClick={() =>
         router.push(`/product/${id}-${brand.toLowerCase().replace(" ", "-")}`)
       }
-      role="button"
     >
       <p className={`${namespace}__name`}>{brand}</p>
-      <img className={`${namespace}__image`} src={image} alt={name} />
+      <img className={`${namespace}__image`} src={image} alt={brand} />
       {rating && (
         <div className={`${namespace}__rating-container`}>
           <span className={`${namespace}__star`}>⭐</span>
