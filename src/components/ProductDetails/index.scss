@@ -1,0 +1,121 @@
+.product-detail__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 9px 0;
+  width: 100%;
+
+  .product-detail__icons-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    width: 100%;
+
+    p {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 23px;
+      text-align: left;
+    }
+
+    svg {
+      background: rgba(255, 255, 255, 1);
+      border-radius: 12px;
+      padding: 8px;
+    }
+  }
+  .product-detail__image {
+    height: 240px;
+  }
+  .product-detail__text-container {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 48px 48px 0 0;
+    margin-top: 16px;
+    padding: 45px 15px;
+    height: 100%;
+  }
+  .product-detail__price-container {
+    margin-bottom: 4px;
+
+    .product-detail__name {
+      color: $text-color-black;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 31.25px;
+      text-align: left;
+    }
+    .product-detail__price {
+      color: $primary-color;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 31.25px;
+      text-align: left;
+    }
+  }
+  .product-detail__stock-container p {
+    color: $text-color-secondary;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 29px;
+    line-height: 18.23px;
+    text-align: left;
+  }
+
+  .product-detail__description {
+    color: $text-color-primary;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 20.83px;
+    text-align: left;
+  }
+
+  .product-detail__information {
+    color: $text-color-secondary;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .product-detail__size {
+    color: $text-color-primary;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 22px 0 13px;
+    line-height: 20.83px;
+    text-align: left;
+  }
+
+  .product-detail__size-container {
+    display: flex;
+    gap: 16px;
+  }
+
+  .product-detail__buy-icons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    .product-detail__bag-icon {
+      background-color: transparent;
+      border: 1px solid $primary-color;
+      border-radius: 12px;
+      background-color: transparent;
+      width: 54px;
+      height: 54px;
+    }
+
+    .product-detail__add-to-cart-icon {
+      background: $primary-color;
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      width: 247px;
+      height: 54px;
+      top: 723px;
+      left: 104px;
+    }
+  }
+}
