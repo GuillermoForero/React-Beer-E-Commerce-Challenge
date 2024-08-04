@@ -40,6 +40,28 @@ To start the application in production:
 To run the tests:
 
     npm run tests
+
+## Routing
+ - `/` redirects to `/products`.
+ - `/products` is the Product List Page (PLP).
+ - Any invalid route like `/something-else` redirects to a 404 page.
+ - `/product/[id]` is the Product Detail Page (PDP).
+
+## Views
+- **PLP:**
+
+![image](https://github.com/user-attachments/assets/319992ec-b9fb-4193-8fd4-4fde5c4b6de1)
+
+- **PDP:**
+
+![image](https://github.com/user-attachments/assets/79949605-0b8a-4a84-b279-f826c66f111b)
+
+
+- **404:**
+
+![image](https://github.com/user-attachments/assets/954b4fdd-1712-4764-a5a8-f02d8549d9f1)
+
+
 ## Features
 
 -   **Next.js** for server-side rendering React applications.
