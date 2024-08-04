@@ -1,7 +1,8 @@
+import { useState, useEffect, useRef } from "react";
 import { useProducts } from "@/context/ProductsContext";
 import BackIcon from "@/icons/BackIcon";
 import DotsIcon from "@/icons/DotsIcon";
-import { useState, useEffect } from "react";
+
 import ButtonSize from "../ButtonSize";
 import Link from "next/link";
 import BagIcon from "@/icons/BagIcon";
@@ -13,6 +14,21 @@ const ProductDetails = ({ id }) => {
   const [product, setProduct] = useState(null);
   const [selectedSku, setSelectedSku] = useState(null);
   const [stockPrice, setStockPrice] = useState(null);
+  const [expanded, setExpanded] = useState(false);
+  const [showReadMore, setShowReadMore] = useState(false);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (contentRef.current) {
+        setShowReadMore(contentRef.current.clientHeight > 96);
+      }
+    }, 0);
+  }, []);
+
+  const toggleExpand = () => {
+    setExpanded(!expanded);
+  };
 
   useEffect(() => {
     if (id) {
@@ -72,7 +88,28 @@ const ProductDetails = ({ id }) => {
           </p>
         </div>
         <h3 className={`${namespace}__description`}>Description</h3>
-        <p className={`${namespace}__information`}>{product.information}</p>
+        <div
+          ref={contentRef}
+          className={`${namespace}__information-container ${
+            expanded ? "expanded" : ""
+          }`}
+        >
+          <p
+            className={`${namespace}__information ${
+              expanded ? "expanded" : ""
+            } ${showReadMore ? "show-read" : ""}`}
+          >
+            {product.information}
+          </p>
+          {showReadMore && (
+            <button
+              className="text-blue-500 cursor-pointer mt-2 focus:outline-none"
+              onClick={toggleExpand}
+            >
+              {expanded ? "Show less" : "Read more"}
+            </button>
+          )}
+        </div>
         <h3 className={`${namespace}__size`}>Size</h3>
         <div className={`${namespace}__size-container`}>
           {product.skus.map((sku) => (
