@@ -1,9 +1,7 @@
 # Beer Challenge 
 
 ## Description
-
-This is a frontend application developed with Next.js for a work challenge. The application is designed to provide a robust and scalable platform using the latest web technologies.
-
+This is a frontend application developed with Next.js for a work challenge. The application is designed to provide a robust and scalable platform using the latest web technologies. Server-side rendering is used to enhance the user experience, especially for e-commerce, by preloading product information before the pages are rendered.
 ### Clone the repository:
    ```bash
    git clone https://github.com/your-username/your-repository.git
