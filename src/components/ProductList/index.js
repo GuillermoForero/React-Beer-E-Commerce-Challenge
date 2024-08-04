@@ -2,7 +2,7 @@ import React from "react";
 
 import { useProducts } from "@/context/ProductsContext";
 
-import ProductListCard from "../ProductListCard/ProductListCard";
+import ProductListCard from "../ProductListCard";
 
 export default function ProductList() {
   const { products } = useProducts();

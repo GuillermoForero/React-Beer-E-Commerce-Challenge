@@ -13,15 +13,7 @@ const ProductListCard = ({ image, name, rating, price, id, brand }) => {
       role="button"
     >
       <p className={`${namespace}__name`}>{brand}</p>
-      <img
-        style={{
-          backgroundImage:
-            "https://beer-challenge-ecommerce-bucket.s3.amazonaws.com/images/modelo-especial.jpeg",
-        }}
-        className={`${namespace}__image`}
-        src={image}
-        alt={name}
-      />
+      <img className={`${namespace}__image`} src={image} alt={name} />
       {rating && (
         <div className={`${namespace}__rating-container`}>
           <span className={`${namespace}__star`}>⭐</span>

@@ -3,7 +3,7 @@ import React from "react";
 import MenuIcon from "@/icons/menuIcon";
 import { fetchProducts } from "@/services/productsService";
 
-import ProductList from "../components/ProductList/ProductList";
+import ProductList from "../components/ProductList";
 
 const namespace = "products";
 const ProductsPage = () => {

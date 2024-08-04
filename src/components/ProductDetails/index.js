@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 import { useProducts } from "@/context/ProductsContext";
@@ -87,6 +87,7 @@ const ProductDetails = ({ id }) => {
           className={`${namespace}__information-container ${
             expanded ? "expanded" : ""
           }`}
+          data-testid="information-container"
         >
           <p
             className={`${namespace}__information ${

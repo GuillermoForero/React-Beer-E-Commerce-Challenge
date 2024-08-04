@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import ProductDetails from "../../components/ProductDetails/ProductDetails";
+import ProductDetails from "../../components/ProductDetails";
 import { fetchProducts } from "@/services/productsService";
 
 const Product = () => {
