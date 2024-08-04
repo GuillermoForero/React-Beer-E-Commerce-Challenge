@@ -1,7 +1,8 @@
 import { useRouter } from "next/router";
 import ProductDetails from "../../components/ProductDetails/ProductDetails";
+import { fetchProducts } from "@/services/productsService";
 
-export default function Product() {
+const Product = () => {
   const router = useRouter();
   const { id } = router.query;
 
@@ -10,11 +11,10 @@ export default function Product() {
       <ProductDetails id={id} />
     </div>
   );
-}
+};
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:5000/api/products");
-  const products = await res.json();
+  const products = await fetchProducts();
 
   const paths = products.map((product) => ({
     params: {
@@ -27,12 +27,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps() {
   let productsList = [];
-  try {
-    const res = await fetch("http://localhost:5000/api/products");
-    const data = await res.json();
-    productsList = data;
-  } catch (error) {
-    console.error(error);
-  }
+  const data = await fetchProducts();
+  productsList = data;
   return { props: { productsList } };
 }
+
+export default Product;

@@ -2,7 +2,7 @@
   padding: 40px 24px;
 
   svg {
-    background: rgba(255, 255, 255, 1);
+    background: $app-white-color;
     border-radius: 12px;
     padding: 8px;
   }
@@ -34,8 +34,8 @@
       color: $text-color-primary;
       font-size: 24px;
       font-weight: 700;
-      margin: 5px 0 15px;
       line-height: 31.25px;
+      margin: 5px 0 15px;
       text-align: left;
     }
 

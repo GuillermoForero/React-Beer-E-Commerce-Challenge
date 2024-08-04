@@ -1,10 +1,11 @@
 import React from "react";
 import Head from "next/head";
 
+import { ProductsProvider } from "@/context/ProductsContext";
+
 import RootLayout from "../app/layout";
 
 import "./styles/index.scss";
-import { ProductsProvider } from "@/context/ProductsContext";
 
 const App = ({ Component, pageProps }) => (
   <>

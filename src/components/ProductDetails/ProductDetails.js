@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+
 import { useProducts } from "@/context/ProductsContext";
 import BackIcon from "@/icons/BackIcon";
 import DotsIcon from "@/icons/DotsIcon";
+import BagIcon from "@/icons/BagIcon";
+import { fetchStockPrice } from "@/services/productsService";
 
 import ButtonSize from "../ButtonSize";
-import Link from "next/link";
-import BagIcon from "@/icons/BagIcon";
 
 const namespace = "product-detail";
 
@@ -38,28 +40,20 @@ const ProductDetails = ({ id }) => {
       }
     }
 
-    const fetchStockPrice = () => {
+    const fetchStockPriceLoopFunction = async () => {
       if (selectedSku) {
-        fetch(`http://localhost:5000/api/stock-price/${selectedSku}`)
-          .then((res) => res.json())
-          .then((data) => setStockPrice(data))
-          .catch((err) => {
-            console.log(err);
-          });
+        const data = await fetchStockPrice(selectedSku);
+        setStockPrice(data);
       }
     };
-    const interval = setInterval(fetchStockPrice, 5000);
+    const interval = setInterval(fetchStockPriceLoopFunction, 5000);
 
     return () => clearInterval(interval);
   }, [selectedSku]);
 
-  const handleSelectSku = (sku) => {
-    fetch(`http://localhost:5000/api/stock-price/${sku}`)
-      .then((res) => res.json())
-      .then((data) => setStockPrice(data))
-      .catch((err) => {
-        console.log(err);
-      });
+  const handleSelectSku = async (sku) => {
+    const data = await fetchStockPrice(sku);
+    setStockPrice(data);
     setSelectedSku(sku);
   };
   if (!product) return <div>Loading...</div>;

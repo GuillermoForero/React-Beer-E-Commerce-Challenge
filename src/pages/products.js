@@ -1,6 +1,9 @@
 import React from "react";
-import ProductList from "../components/ProductList/ProductList";
+
 import MenuIcon from "@/icons/menuIcon";
+import { fetchProducts } from "@/services/productsService";
+
+import ProductList from "../components/ProductList/ProductList";
 
 const namespace = "products";
 const ProductsPage = () => {
@@ -22,16 +25,10 @@ const ProductsPage = () => {
   );
 };
 
-export async function getStaticProps(test) {
+export async function getStaticProps() {
   let productsList = [];
-
-  try {
-    const res = await fetch("http://localhost:5000/api/products");
-    const data = await res.json();
-    productsList = data;
-  } catch (error) {
-    console.error(error);
-  }
+  const data = await fetchProducts();
+  productsList = data;
   return { props: { productsList } };
 }
 
