@@ -1,21 +1,10 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext } from "react";
 
 const ProductsContext = createContext();
 
-export const ProductsProvider = ({ productsList, children }) => {
-  const [products, setProducts] = useState(productsList);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const productsData = window.localStorage.getItem("products-data");
-      if (productsData) {
-        setProducts(JSON.parse(productsData));
-      }
-    }
-  }, []);
-
+export const ProductsProvider = ({ productsList: products, children }) => {
   return (
-    <ProductsContext.Provider value={{ products, setProducts }}>
+    <ProductsContext.Provider value={{ products }}>
       {children}
     </ProductsContext.Provider>
   );

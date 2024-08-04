@@ -3,14 +3,12 @@ import { useProducts } from "@/context/ProductsContext";
 import { fetchStockPrice } from "@/services/productsService";
 import ProductDetails from "./index";
 
-// Mocking the required modules and functions
 jest.mock("@/context/ProductsContext");
 jest.mock("@/services/productsService");
 jest.mock("next/link", () => {
   return ({ children }) => children;
 });
 
-// Setup function for rendering the component
 const setup = (propsOverride) => {
   const defaultProps = {
     id: "1-modelo-especial",
@@ -99,10 +97,8 @@ describe("ProductDetails Component", () => {
 
     await screen.findByText("$10");
 
-    // Mock a price change
     fetchStockPrice.mockResolvedValue({ price: 12, stock: 95 });
 
-    // Fast-forward time to trigger the interval
     await act(async () => {
       jest.advanceTimersByTime(5000);
     });

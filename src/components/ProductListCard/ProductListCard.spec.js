@@ -1,8 +1,9 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import ProductListCard from "./index";
 import { useRouter } from "next/router";
 
-// Mockea el hook useRouter
+import { render, screen, fireEvent } from "@testing-library/react";
+
+import ProductListCard from "./index";
+
 jest.mock("next/router", () => ({
   useRouter: jest.fn(),
 }));
