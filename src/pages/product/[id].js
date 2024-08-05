@@ -14,22 +14,21 @@ const Product = () => {
 };
 
 export async function getStaticPaths() {
-  const products = await fetchProducts();
-
-  const paths = products.map((product) => ({
-    params: {
-      id: `${product.id}-${product.brand.toLowerCase().replace(" ", "-")}`,
-    },
-  }));
-
-  return { paths, fallback: true };
+  return {
+    paths: [],
+    fallback: "blocking",
+  };
 }
 
 export async function getStaticProps() {
   let productsList = [];
-  const data = await fetchProducts();
-  productsList = data;
-  return { props: { productsList } };
+  try {
+    const data = await fetchProducts();
+    productsList = data;
+  } catch (error) {
+    console.error(error);
+  }
+  return { props: { productsList }, revalidate: 1 };
 }
 
 export default Product;

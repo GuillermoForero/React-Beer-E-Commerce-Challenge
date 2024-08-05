@@ -6,7 +6,6 @@ export async function fetchStockPrice(sku) {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Error fetching stock price:", error);
     throw error;
   }
 }
@@ -17,7 +16,6 @@ export async function fetchProducts() {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Error fetching products:", error);
     throw error;
   }
 }

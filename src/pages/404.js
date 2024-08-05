@@ -14,9 +14,14 @@ const page404 = () => {
 
 export async function getStaticProps() {
   let productsList = [];
-  const data = await fetchProducts();
-  productsList = data;
-  return { props: { productsList } };
+  try {
+    const data = await fetchProducts();
+    productsList = data;
+  } catch (error) {
+    console.error(error);
+  }
+
+  return { props: { productsList }, revalidate: 1 };
 }
 
 export default page404;
