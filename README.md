@@ -10,11 +10,9 @@ This is a frontend application developed with Next.js for a work challenge. The 
 ### Node version:
 It is recommended to use the latest versions of node, version 20 was used for development
 
-### Node version:
-It is recommended to use the latest versions of node, version 20 was used for development
-
 ### To take into count
-It is recommended to run the front and back at the same time to avoid problems.
+- It is recommended to run the front and back at the same time to avoid problems.
+- Also for the front end you need a `.env.local` file in the frontend folder, you can copy the content of the `example.env.local` file
 
 # Frontend
 
