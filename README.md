@@ -10,6 +10,12 @@ This is a frontend application developed with Next.js for a work challenge. The 
 ### Node version:
 It is recommended to use the latest versions of node, version 20 was used for development
 
+### Node version:
+It is recommended to use the latest versions of node, version 20 was used for development
+
+### To take into count
+It is recommended to run the front and back at the same time to avoid problems.
+
 # Frontend
 
  1. Navigate to the project directory: 
@@ -53,7 +59,7 @@ To run the tests:
 
 
 - **404:**
-
+The 404 page works only when you run it as if it were prod, doing build and running start, this is because of the way next works
 ![image](https://github.com/user-attachments/assets/954b4fdd-1712-4764-a5a8-f02d8549d9f1)
 
 
