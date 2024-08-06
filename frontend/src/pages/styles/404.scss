@@ -1,0 +1,26 @@
+.container-404 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  justify-content: center;
+  padding: 0 16px;
+
+  h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  a {
+    color: $primary-color;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+  }
+}

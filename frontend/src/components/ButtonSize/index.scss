@@ -1,0 +1,17 @@
+.button-size {
+  background: transparent;
+  border: 2px solid $text-color-secondary;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.23px;
+  padding: 9px 9px 9px 15px;
+  text-align: left;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.button-size.active {
+  border-color: $primary-color;
+  color: $primary-color;
+}

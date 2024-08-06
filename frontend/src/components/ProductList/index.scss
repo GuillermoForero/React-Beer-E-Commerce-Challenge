@@ -1,0 +1,7 @@
+.product-list-container {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 13px;
+  grid-template-columns: 1fr 1fr;
+}

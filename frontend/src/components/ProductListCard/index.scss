@@ -1,0 +1,76 @@
+$primary-color: #ffa500;
+$card-bg-color: #fff;
+$box-shadow-color: rgba(0, 0, 0, 0.1);
+
+.product-list-card__container {
+  background-color: $card-bg-color;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px $box-shadow-color;
+  cursor: pointer;
+  height: 195px;
+  padding: 16px 14px 8px;
+  position: relative;
+  text-align: center;
+  width: auto;
+
+  .product-list-card__image {
+    height: 122px;
+    margin: 16px 0;
+    width: auto;
+  }
+
+  .product-list-card__name {
+    color: $text-color-primary;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .product-list-card__rating-container {
+    align-items: center;
+    bottom: 35px;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    margin: 5px 0;
+    position: absolute;
+
+    .product-list-card__star {
+      color: $text-color-light-gray;
+      font-size: 12px;
+      margin-right: 5px;
+      width: 12px;
+    }
+
+    .product-list-card__rating-text {
+      color: $text-color-primary;
+      line-height: 12px;
+    }
+  }
+
+  .product-list-card__price {
+    color: $text-color-black;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .product-list-card__button {
+    background-color: $primary-color;
+    border: none;
+    border-radius: 5px 0 5px 0;
+    bottom: 0;
+    color: $app-white-color;
+    cursor: pointer;
+    font-size: 24px;
+    height: 40px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    width: 40px;
+  }
+
+  .product-list-card__add-to-cart-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
